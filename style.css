@@ -1,0 +1,696 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #232425;
+  color: silver;
+  font-family: 'Gelasio', serif;
+}
+
+/* ------------------------------ GALAXY BACKGROUND ------------------------------ */
+#galaxy {
+  position: fixed;
+  /* stays in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* makes clicks go through */
+  z-index: -1;
+  /* places galaxy behind everything */
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 1.8px;
+  height: 1.8px;
+  background: silver;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* ------------------------------ SCROLL ANIMATIONS ------------------------------ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ------------------------------ HAMBURGER MENU ------------------------------ */
+.hamburger {
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 40px;
+  right: 45px;
+  z-index: 10000;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hamburger span {
+  height: 4px;
+  background: rgb(132, 127, 127);
+  border-radius: 1px;
+}
+
+.hamburger:hover span:nth-child(1) {
+  transform: rotate(10deg) translate(5px, 5px);
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: rotate(-10deg) translate(5px, 5px);
+}
+
+/* ------------------------------ SIDE MENU ------------------------------ */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 5rem;
+  gap: 2rem;
+  height: 30%;
+
+
+
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-decoration: none;
+
+  font-weight: 500;
+}
+
+.link-item:hover {
+  color: orange;
+
+}
+
+.link-item img {
+  height: 2rem;
+
+  width: 2rem;
+  
+  border-radius: 50%;
+ 
+}
+
+.link-item a {
+  font-size: 1.25rem;
+  
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.conect-section {
+  margin-top: 18rem;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.conect-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.conect-section a {
+  display: inline-block;
+  font-size: 1rem;
+  color: silver;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.conect-section a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.conect-section h3 {
+  font-size: 1rem;
+  margin-top: 2rem;
+  font-weight: 200;
+}
+
+.conect-section  h3:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ------------------------------ HERO SECTION ------------------------------ */
+.hero-section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 6rem;
+  margin-top: 15rem;
+  height: 100vh;
+}
+
+.heading1 {
+  font-size: 3.5rem;
+  margin-bottom: -1rem;
+  color: orange;
+}
+
+.heading2 {
+  font-size: 3.8rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2rem;
+  width: 45%;
+  color: #adadad;
+}
+
+.btn-1 {
+  width: 6rem;
+  height: 3rem;
+  font-size: 1rem;
+  background-color: orange;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
+}
+
+.btn-1:hover {
+  background-color: white;
+  transition: background-color 0.6s ease;
+}
+
+.right-side-content {
+  text-align: right;
+  margin-right: 2rem;
+  margin-top: -6rem;
+}
+
+.right-side-content h1 {
+  color: orange;
+  font-size: 2rem;
+}
+
+.right-side-content p {
+  font-size: 1.4rem;
+}
+
+/* ------------------------------ ABOUT SECTION ------------------------------ */
+.about-section {
+  margin-top: -2rem;
+  margin-left: 6rem;
+  margin-right: 3rem;
+  padding: 4rem 2rem;
+  height: 100vh;
+}
+
+.about-section .pera-3 {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-section .pera-2 {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.about-section hr {
+  width: 80%;
+  border: 1px solid #444;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  gap: 8rem;
+}
+
+.about-content .left h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-content .right {
+  width: 60%;
+}
+
+.about-content .right .pera-1,
+.about-content .right .pera-2 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ------------------------------ STACK SECTION ------------------------------ */
+.stack-section {
+  font-size: 2rem;
+  margin-left: 7rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stack-section img {
+  height: 50px;
+  width: 50px;
+}
+
+.frontend {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.frontend .left h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(172, 166, 166);
+}
+
+.frontend .right {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 35%;
+}
+
+.skill {
+  flex: 1 1 calc(25% - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 150px;
+  position: relative;
+  /* hover image ke liye */
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+}
+
+.skill span {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.Tools {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8rem;
+  height: 20.6rem;
+  width: 80%;
+}
+
+.Tools .left h1 {
+  font-size: 3rem;
+  margin-left: -4rem;
+  font-weight: 600;
+  color: rgb(172, 166, 166);
+}
+
+.Tools .right {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 35%;
+}
+
+/* ----------------- HOVER FIX ----------------- */
+.hover-text {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.hover-img {
+  position: absolute;
+  top: -120%;
+  left: 50%;
+  width: 120px;
+  height: 160px;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.hover-text:hover {
+  color: orange;
+}
+
+.hover-text:hover+.hover-img {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  z-index: 5;
+}
+
+/* ------------------------------ PROJECTS ------------------------------ */
+.project-heading {
+  font-size: 2rem;
+  margin-left: 7rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-lists {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: 7rem;
+  margin-top: 3rem;
+  transition: color 0.3s ease;
+}
+
+.project-lists-header {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tech {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  margin-left: 2.3rem;
+
+}
+
+.project-container hr {
+  width: 90%;
+  border: 1px solid #444;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+}
+
+.project-lists-header:hover {
+  color: orange;
+}
+
+/* ------------------------------ FOOTER ------------------------------ */
+.footer-section {
+  margin-top: 10rem;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.footer-section a {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: silver;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.footer-section h3 {
+  font-size: 1rem;
+  margin-top: 2.6rem;
+  font-weight: 200;
+}
+
+.footer-section h3:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------ MEDIA QUERIES ------------------------------ */
+/* Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  .hero-section {
+    margin-left: 10rem;
+  }
+
+  .about-section {
+    margin-left: 10rem;
+    margin-right: 6rem;
+  }
+
+  .stack-section,
+  .project-heading,
+  .project-lists {
+    margin-left: 10rem;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-section {
+    margin-left: 3rem;
+    margin-top: 8rem;
+  }
+
+  .heading1 {
+    font-size: 2.8rem;
+  }
+
+  .heading2 {
+    font-size: 3rem;
+  }
+
+  .info {
+    width: 70%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-content .right {
+    width: 100%;
+  }
+
+  .stack-section,
+  .project-heading,
+  .project-lists {
+    margin-left: 3rem;
+  }
+}
+
+/* Mobiles (480px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .hero-section {
+    margin-left: 1.5rem;
+    margin-top: 10rem;
+  }
+
+  .heading1 {
+    font-size: 2.2rem;
+  }
+
+  .heading2 {
+    font-size: 2.4rem;
+    margin-left: 0;
+  }
+
+  .info {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .btn-1 {
+    width: 40%;
+    height: 2.5rem;
+  }
+
+  .about-section {
+    margin: 0 1.5rem;
+    padding: 2rem 1rem;
+    height: auto;
+    margin-top: -5rem;
+  }
+
+  .about-section .pera-3 {
+    font-size: 1.3rem;
+  }
+
+  .about-section .pera-2,
+  .about-content .right .pera-1,
+  .about-content .right .pera-2 {
+    font-size: 1rem;
+  }
+
+  .stack-section {
+    font-size: 1.4rem;
+    flex-wrap: wrap;
+    margin-left: 1.5rem;
+  }
+
+  .frontend .left h1 {
+    font-size: 1.8rem;
+  }
+
+  .frontend .right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .skill {
+    flex: 1 1 45%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .tech {
+    font-size: 0.7rem;
+  }
+
+  .footer-section h2 {
+    font-size: 1rem;
+  }
+
+  .footer-section a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    margin-left: 1rem;
+    margin-top: 8rem;
+  }
+
+  .heading1 {
+    font-size: 1.8rem;
+  }
+
+  .heading2 {
+    font-size: 2rem;
+  }
+
+  .info {
+    font-size: 0.9rem;
+  }
+
+  .btn-1 {
+    width: 50%;
+    height: 2.2rem;
+  }
+
+  .about-section {
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+
+  .stack-section img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .skill span {
+    font-size: 0.9rem;
+  }
+
+  .project-heading {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .footer-section a {
+    font-size: 1rem;
+  }
+}
