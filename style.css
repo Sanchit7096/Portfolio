@@ -604,12 +604,17 @@ body {
     height: 2.5rem;
   }
 
+  .right-side-content{
+  background-color: red;
+  }
+
   .about-section {
     margin: 0 1.5rem;
     padding: 2rem 1rem;
     height: auto;
     margin-top: -5rem;
   }
+
 
   .about-section .pera-3 {
     font-size: 1.3rem;
@@ -661,9 +666,9 @@ body {
 @media (max-width: 480px) {
   .hero-section {
     margin-left: 1rem;
-    margin-top: 8rem;
+    margin-top: 15rem;
   }
-
+ 
   .heading1 {
     font-size: 1.8rem;
   }
@@ -681,9 +686,47 @@ body {
     height: 2.2rem;
   }
 
-  .about-section {
-    margin: 0 1rem;
-    padding: 1rem;
+   .right-side-content h1 {
+    font-size: 1rem;
+  }
+  .right-side-content p {
+    font-size: 0.6rem;
+  }
+
+  
+.about-section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .about-section .pera-3 {
+    font-size: 1.4rem;
+    margin-top: -22rem;
+  }
+
+  .about-content .left h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-section hr {
+    width: 100%;
+  }
+
+  .about-content {
+    gap: 1.5rem;
+  }
+
+  .about-content .right .pera-1,
+  .about-content .right .pera-2 {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+ .stack-section {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
   }
 
   .stack-section img {
@@ -691,20 +734,113 @@ body {
     width: 40px;
   }
 
+  .frontend,
+  .Tools {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .frontend .left h1,
+  .Tools .left h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
+
+  .frontend .right,
+  .Tools .right {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .skill {
+    flex: 1 1 40%; /* two per row */
+    max-width: 120px;
+  }
+
+  .skill img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill span {
+    font-size: 0.9rem;
+  }
+
+
+  .stack-section img {
+    height: 40px;
+    width: 40px;
+  }
+  .stack-section .frontend {
+    margin-top: 20rem;
+    margin-bottom: 4rem;
+
+  }
   .skill span {
     font-size: 0.9rem;
   }
 
   .project-heading {
-    font-size: 0.9rem;
-    margin-left: 1rem;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    margin-left: 0;
+    justify-content: center; /* center heading */
+    text-align: center;
+  }
+
+  .project-lists {
+    margin-left: 0;
+    margin-top: 1.5rem;
+    align-items: center; /* center project items */
+    text-align: center;
+  }
+
+  .project-lists-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .number {
+    font-size: 18px;
   }
 
   .title {
+    font-size: 1.4rem;
+  }
+
+  .tech {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .project-container hr {
+    margin-left: 0;
+    width: 100%;
+  }
+  .footer-section {
+    margin-top: 4rem;
+    padding: 20px 10px;
+  }
+
+  .footer-section h2 {
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .footer-section a {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    word-break: break-word; /* email breaks nicely */
   }
+
+  .footer-section h3 {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
 }
