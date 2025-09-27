@@ -79,25 +79,5 @@ gsap.from(".project-lists", {
   }
 });
 
-const text = document.querySelector("#hover-text");
-const img = document.querySelector(".hover-img");
 
-// Hover In
-text.addEventListener("mouseenter", () => {
-  gsap.to(img, {
-    opacity: 1,
-    scale: 1,
-    duration: 0.6,
-    ease: "power3.out"
-  });
-});
 
-// Hover Out
-text.addEventListener("mouseleave", () => {
-  gsap.to(img, {
-    opacity: 0,
-    scale: 0.5,
-    duration: 0.6,
-    ease: "power3.in"
-  });
-});
