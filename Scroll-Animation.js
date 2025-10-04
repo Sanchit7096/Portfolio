@@ -31,13 +31,26 @@ gsap.from(".heading2", {
 gsap.from(".about-content .left", {
   x: -100,
   opacity: 0,
-  duration: 1,
+  duration: 2,
   scrollTrigger: {
     trigger: ".about-section",
     start: "top 75%",
     toggleActions: "restart none restart none"
   }
 });
+gsap.from(".pera-3", {
+  x: 80,
+  opacity: 0,
+  stagger: 0.3,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top 20%",
+    toggleActions: "restart none restart none"
+  }
+});
+
 
 gsap.from(".about-content .right", {
   x: 100,
@@ -74,7 +87,7 @@ gsap.from(".project-lists", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".project-container",
-    start: "top 80%",
+    start: "top 50%",
     toggleActions: "restart none restart none"
   }
 });

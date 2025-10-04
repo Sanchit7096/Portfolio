@@ -151,14 +151,14 @@ body {
   height: 2rem;
 
   width: 2rem;
-  
+
   border-radius: 50%;
- 
+
 }
 
 .link-item a {
   font-size: 1.25rem;
-  
+
   text-decoration: none;
   color: inherit;
 
@@ -194,7 +194,7 @@ body {
   font-weight: 200;
 }
 
-.conect-section  h3:hover {
+.conect-section h3:hover {
   text-decoration: underline;
 }
 
@@ -211,34 +211,36 @@ body {
 }
 
 .heading1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: -1rem;
   color: orange;
 }
 
 .heading2 {
-  font-size: 3.8rem;
+  font-size: 4rem;
   margin-left: 1rem;
 }
 
 .info {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   width: 45%;
   color: #adadad;
 }
+
 .Resume-btn {
 
   position: relative;
   z-index: 10;
- margin-top: 2rem;
+  margin-top: 2rem;
 }
+
 .Resume-btn a {
   display: inline-block;
   width: 8rem;
   height: 3rem;
   line-height: 3rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
   background-color: orange;
@@ -247,10 +249,11 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
-  z-index: 20; /* Even higher */
+  z-index: 20;
+  /* Even higher */
 }
 
-.Resume-btn a:hover{
+.Resume-btn a:hover {
   background-color: white;
   color: black;
 }
@@ -289,7 +292,7 @@ body {
 
 .about-section .pera-2 {
   font-size: 1.4rem;
-  color: #ccc;
+  color: rgb(172, 166, 166);
   margin-bottom: 0.5rem;
 }
 
@@ -320,24 +323,35 @@ body {
 }
 
 /* ------------------------------ STACK SECTION ------------------------------ */
+
 .stack-section {
-  font-size: 2rem;
-  margin-left: 7rem;
+  display: flex;
+  flex-direction: column;
+margin-left: 8rem;
+  margin-top: 3rem;
+  color: white;
+}
+
+.stack-header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.stack-section img {
+.stack-header img {
   height: 50px;
   width: 50px;
 }
 
+/* -------------------- FRONTEND SECTION -------------------- */
 .frontend {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 90%;
   margin-top: 1.5rem;
 }
 
@@ -363,7 +377,6 @@ body {
   gap: 0.5rem;
   max-width: 150px;
   position: relative;
-  /* hover image ke liye */
 }
 
 .skill img {
@@ -373,22 +386,24 @@ body {
 
 .skill span {
   font-size: 1rem;
-  color: #fff;
+    color: rgb(172, 166, 166);
   font-weight: 600;
 }
 
+/* -------------------- TOOLS SECTION -------------------- */
 .Tools {
-  /* background-color: aqua; */
   display: flex;
   justify-content: space-around;
-  margin-top: 8rem;
-  height: 20.6rem;
-  width: 80%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-top: 6rem;
+
+  
 }
 
 .Tools .left h1 {
   font-size: 3rem;
-  margin-left: -4rem;
   font-weight: 600;
   color: rgb(172, 166, 166);
 }
@@ -401,48 +416,23 @@ body {
   width: 35%;
 }
 
-/* ----------------- HOVER FIX ----------------- */
-.hover-text {
-  position: relative;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: white;
-  transition: color 0.3s ease;
-}
 
-.hover-img {
-  position: absolute;
-  top: -120%;
-  left: 50%;
-  width: 120px;
-  height: 160px;
-  transform: translateX(-50%) scale(0.8);
-  opacity: 0;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  pointer-events: none;
-}
 
-.hover-text:hover {
-  color: orange;
-}
-
-.hover-text:hover+.hover-img {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
-  z-index: 5;
-}
 
 /* ------------------------------ PROJECTS ------------------------------ */
+.project-container{
+  margin-top: 10rem;
+}
+
 .project-heading {
   font-size: 2rem;
   margin-left: 7rem;
   display: flex;
-  align-items: center;
+  margin-left: 8rem;
+  margin-top: 3rem;
+  color: white;
   gap: 1rem;
+  
 }
 
 .project-lists {
@@ -466,8 +456,9 @@ body {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
+  color: rgb(172, 166, 166);
   cursor: pointer;
 }
 
@@ -488,6 +479,9 @@ body {
 .project-lists-header:hover {
   color: orange;
 }
+.title:hover {
+  color: orange;
+}
 
 /* ------------------------------ FOOTER ------------------------------ */
 .footer-section {
@@ -504,7 +498,7 @@ body {
 .footer-section a {
   display: inline-block;
   font-size: 1.8rem;
-  color: silver;
+  color: rgb(172, 166, 166);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -522,325 +516,4 @@ body {
 
 .footer-section h3:hover {
   text-decoration: underline;
-}
-
-/* ------------------------------ MEDIA QUERIES ------------------------------ */
-/* Large Screens (1440px+) */
-@media (min-width: 1440px) {
-  .hero-section {
-    margin-left: 10rem;
-  }
-
-  .about-section {
-    margin-left: 10rem;
-    margin-right: 6rem;
-  }
-
-  .stack-section,
-  .project-heading,
-  .project-lists {
-    margin-left: 10rem;
-  }
-}
-
-/* Tablets (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .hero-section {
-    margin-left: 3rem;
-    margin-top: 8rem;
-  }
-
-  .heading1 {
-    font-size: 2.8rem;
-  }
-
-  .heading2 {
-    font-size: 3rem;
-  }
-
-  .info {
-    width: 70%;
-  }
-
-  .about-content {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .about-content .right {
-    width: 100%;
-  }
-
-  .stack-section,
-  .project-heading,
-  .project-lists {
-    margin-left: 3rem;
-  }
-}
-
-/* Mobiles (480px - 767px) */
-@media (max-width: 767px) and (min-width: 481px) {
-  .hero-section {
-    margin-left: 1.5rem;
-    margin-top: 10rem;
-  }
-
-  .heading1 {
-    font-size: 2.2rem;
-  }
-
-  .heading2 {
-    font-size: 2.4rem;
-    margin-left: 0;
-  }
-
-  .info {
-    width: 90%;
-    font-size: 1rem;
-  }
-
-  .btn-1 {
-    width: 40%;
-    height: 2.5rem;
-  }
-
-  .right-side-content{
-  background-color: red;
-  }
-
-  .about-section {
-    margin: 0 1.5rem;
-    padding: 2rem 1rem;
-    height: auto;
-    margin-top: -5rem;
-  }
-
-
-  .about-section .pera-3 {
-    font-size: 1.3rem;
-  }
-
-  .about-section .pera-2,
-  .about-content .right .pera-1,
-  .about-content .right .pera-2 {
-    font-size: 1rem;
-  }
-
-  .stack-section {
-    font-size: 1.4rem;
-    flex-wrap: wrap;
-    margin-left: 1.5rem;
-  }
-
-  .frontend .left h1 {
-    font-size: 1.8rem;
-  }
-
-  .frontend .right {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .skill {
-    flex: 1 1 45%;
-  }
-
-  .title {
-    font-size: 1.2rem;
-  }
-
-  .tech {
-    font-size: 0.7rem;
-  }
-
-  .footer-section h2 {
-    font-size: 1rem;
-  }
-
-  .footer-section a {
-    font-size: 1.2rem;
-  }
-}
-
-/* Small Phones (max-width: 480px) */
-@media (max-width: 480px) {
-  .hero-section {
-    margin-left: 1rem;
-    margin-top: 15rem;
-  }
- 
-  .heading1 {
-    font-size: 1.8rem;
-  }
-
-  .heading2 {
-    font-size: 2rem;
-  }
-
-  .info {
-    font-size: 0.9rem;
-  }
-
-  .btn-1 {
-    width: 50%;
-    height: 2.2rem;
-  }
-
-   .right-side-content h1 {
-    font-size: 1rem;
-  }
-  .right-side-content p {
-    font-size: 0.6rem;
-  }
-
-  
-.about-section {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 2rem 1rem;
-  }
-
-  .about-section .pera-3 {
-    font-size: 1.4rem;
-    margin-top: -22rem;
-  }
-
-  .about-content .left h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .about-section hr {
-    width: 100%;
-  }
-
-  .about-content {
-    gap: 1.5rem;
-  }
-
-  .about-content .right .pera-1,
-  .about-content .right .pera-2 {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
- .stack-section {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    justify-content: center;
-  }
-
-  .stack-section img {
-    height: 40px;
-    width: 40px;
-  }
-
-  .frontend,
-  .Tools {
-    flex-direction: column; /* stack vertically */
-    align-items: center;
-    margin-top: 2rem;
-    width: 100%;
-    height: auto;
-  }
-
-  .frontend .left h1,
-  .Tools .left h1 {
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
-    text-align: center;
-  }
-
-  .frontend .right,
-  .Tools .right {
-    width: 100%;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .skill {
-    flex: 1 1 40%; /* two per row */
-    max-width: 120px;
-  }
-
-  .skill img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .skill span {
-    font-size: 0.9rem;
-  }
-
-
-  .stack-section img {
-    height: 40px;
-    width: 40px;
-  }
-  .stack-section .frontend {
-    margin-top: 20rem;
-    margin-bottom: 4rem;
-
-  }
-  .skill span {
-    font-size: 0.9rem;
-  }
-
-  .project-heading {
-    margin-top: 5rem;
-    font-size: 1.5rem;
-    margin-left: 0;
-    justify-content: center; /* center heading */
-    text-align: center;
-  }
-
-  .project-lists {
-    margin-left: 0;
-    margin-top: 1.5rem;
-    align-items: center; /* center project items */
-    text-align: center;
-  }
-
-  .project-lists-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .number {
-    font-size: 18px;
-  }
-
-  .title {
-    font-size: 1.4rem;
-  }
-
-  .tech {
-    margin-left: 0;
-    font-size: 0.9rem;
-  }
-
-  .project-container hr {
-    margin-left: 0;
-    width: 100%;
-  }
-  .footer-section {
-    margin-top: 4rem;
-    padding: 20px 10px;
-  }
-
-  .footer-section h2 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-
-  .footer-section a {
-    font-size: 1.2rem;
-    word-break: break-word; /* email breaks nicely */
-  }
-
-  .footer-section h3 {
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
-  }
-
 }
