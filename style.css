@@ -517,3 +517,153 @@ margin-left: 8rem;
 .footer-section h3:hover {
   text-decoration: underline;
 }
+/* ------------------------------ MEDIA QUERIES FOR MOBILE ------------------------------ */
+@media (max-width: 768px) {
+
+  /* General Reset for Small Screens */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* ---------------- HERO SECTION ---------------- */
+  .hero-section {
+    
+    margin: 15rem 1rem;
+  
+  }
+
+  .heading1,
+  .heading2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .info {
+    width: 90%;
+    font-size: 1rem;
+   
+  }
+
+  .Resume-btn {
+    margin-top: 1.5rem;
+  }
+
+  .right-side-content {
+    margin-top: 2rem;   /* add gap below Resume button */
+    margin-right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+    gap: 1.2rem;
+  }
+
+  .right-side-content div {
+    width: 50%;
+  }
+
+  .right-side-content h1 {
+    font-size: 1.1rem;
+  }
+
+  .right-side-content p {
+    font-size: 1rem;
+  }
+
+  /* ---------------- ABOUT SECTION ---------------- */
+  .about-section {
+    margin: -25rem 1rem;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-content .right {
+    width: 100%;
+  }
+
+  .about-content .right .pera-1,
+  .about-content .right .pera-2 {
+    font-size: 1.1rem;
+  }
+
+  /* ---------------- STACK SECTION ---------------- */
+  .stack-section {
+    margin: 30rem 1rem;
+  
+  }
+
+  .stack-header {
+    
+    font-size: 1.5rem;
+  }
+
+  .frontend,
+  .Tools {
+    flex-direction: column;
+  
+    width: 100%;
+  }
+
+  .frontend .left h1,
+  .Tools .left h1 {
+    font-size: 2rem;
+   
+    margin-bottom: 1.5rem;
+  }
+
+  .frontend .right,
+  .Tools .right {
+    width: 100%;
+   
+    gap: 1.2rem;
+  }
+
+  .skill img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill span {
+    font-size: 0.9rem;
+  }
+
+  /* ---------------- PROJECT SECTION ---------------- */
+  .project-container {
+    margin: -20rem 1rem;
+  }
+
+  .project-heading {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .project-lists {
+    margin-left: 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .project-container hr {
+    width: 95%;
+    margin-left: 0.5rem;
+  }
+
+  /* ---------------- FOOTER ---------------- */
+  .footer-section {
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+  }
+
+  .footer-section a {
+    font-size: 1.2rem;
+  }
+}
