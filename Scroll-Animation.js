@@ -46,7 +46,7 @@ gsap.from(".pera-3", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".about-section",
-    start: "top 20%",
+    start: "top 80%",
     toggleActions: "restart none restart none"
   }
 });

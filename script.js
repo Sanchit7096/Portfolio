@@ -69,3 +69,10 @@
   });
 
  
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+ScrollTrigger.defaults({
+  toggleActions: "play none none none",
+  once: true
+});
