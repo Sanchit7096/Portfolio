@@ -111,6 +111,34 @@
   background: rgba(0,0,0,0.8);
 }
 
+
+.view-project{
+    height: 10rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.view-project a {
+    background-color: orange;
+    border-radius: 10%;
+    width: 10rem;
+    height: 3rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.view-project a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+
       
         /* FOOTER */
         footer {
