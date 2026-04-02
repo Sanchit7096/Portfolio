@@ -13,7 +13,7 @@ body {
 body {
   background-color: #232425;
   color: silver;
-  font-family: 'Gelasio', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ------------------------------ GALAXY BACKGROUND ------------------------------ */
@@ -38,6 +38,7 @@ body {
   background: silver;
   border-radius: 50%;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 /* ------------------------------ SCROLL ANIMATIONS ------------------------------ */
@@ -529,9 +530,11 @@ margin-left: 8rem;
 
   /* ---------------- HERO SECTION ---------------- */
   .hero-section {
-    
-    margin: 15rem 1rem;
-  
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 8rem;
+    height: auto;
+    padding-bottom: 2rem;
   }
 
   .heading1,
@@ -543,7 +546,6 @@ margin-left: 8rem;
   .info {
     width: 90%;
     font-size: 1rem;
-   
   }
 
   .Resume-btn {
@@ -551,12 +553,11 @@ margin-left: 8rem;
   }
 
   .right-side-content {
-    margin-top: 2rem;   /* add gap below Resume button */
+    margin-top: 2rem;
     margin-right: 0;
     text-align: center;
     display: flex;
     justify-content: center;
-    margin-top: 15rem;
     gap: 1.2rem;
   }
 
@@ -574,7 +575,9 @@ margin-left: 8rem;
 
   /* ---------------- ABOUT SECTION ---------------- */
   .about-section {
-    margin: -25rem 1rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 3rem;
     height: auto;
     padding: 2rem 1rem;
   }
@@ -595,33 +598,30 @@ margin-left: 8rem;
 
   /* ---------------- STACK SECTION ---------------- */
   .stack-section {
-    margin: 30rem 1rem;
-  
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 3rem;
   }
 
   .stack-header {
-    
     font-size: 1.5rem;
   }
 
   .frontend,
   .Tools {
     flex-direction: column;
-  
     width: 100%;
   }
 
   .frontend .left h1,
   .Tools .left h1 {
     font-size: 2rem;
-   
     margin-bottom: 1.5rem;
   }
 
   .frontend .right,
   .Tools .right {
     width: 100%;
-   
     gap: 1.2rem;
   }
 
@@ -636,7 +636,9 @@ margin-left: 8rem;
 
   /* ---------------- PROJECT SECTION ---------------- */
   .project-container {
-    margin: -20rem 1rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 3rem;
   }
 
   .project-heading {
